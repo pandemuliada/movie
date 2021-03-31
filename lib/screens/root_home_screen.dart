@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:movie/components/bottom_navigation_bar.dart';
 import 'package:movie/screens/home_screen.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart' as dotEnv;
 
 class RootHomeScreen extends StatefulWidget {
   @override
@@ -34,7 +35,7 @@ Widget _screenWrapper(int index) {
       return HomeScreen();
     case 1:
       return Container(
-        child: Center(child: Text("Movie Page")),
+        child: Center(child: Text(dotEnv.env["OMDB_API_KEY"])),
       );
     case 2:
       return Container(
