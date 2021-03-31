@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movie/screens/home_screen.dart';
+import 'package:movie/screens/root_home_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -28,7 +28,7 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: HomeScreen(),
+      home: RootHomeScreen(),
     );
   }
 }
